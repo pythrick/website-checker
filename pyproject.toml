@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "website_checker"
+version = "0.1.0"
+description = "Application to check if a website still down"
+authors = ["Patrick <patrick.pwall@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+requests = "^2.23.0"
+dynaconf = "^2.2.3"
+twilio = "^6.37.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry.scripts]
+website-checker = "website_checker.app:run_checker"
